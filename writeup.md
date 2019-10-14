@@ -24,7 +24,8 @@ The goals / steps of this project are the following:
 [perspective_topdown]: ./output_images/perspective_topdown.png "Perspective Test Result"
 [binary_topdown]: ./output_images/binary_topdown.png "Binary Transformed"
 [lanes_topdown]: ./output_images/topdown_lanes.png "Lane finding result"
-[lanes_reprojection]: ./output_images/topdown_lanes_marked.png "Reprojected lane display"
+[lanes_topdown_fit]: ./output_images/topdown_lanes_marked.png "Lanes with fit and markup"
+[lanes_reprojected]: ./output_images/reprojected_lanes_test.png "Lanes reprojected onto image"
 [video1]: ./output_images/project_video_with_lanes.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -198,10 +199,14 @@ image.
 The final step in the pipeline is to reproject the lane lines back on the source image
 and overlay the statistics. The overlay of the markers is done in `overlay_lane_marker`
 (cell `In [49]`). The outer loop that drives detection is defined in cells `In [52]` and
-`In [53]`. Below is an example of the pipeline applied to single test images.
+`In [53]`. Below is an example of the pipeline applied to single test images in top-down
+view.
 
-![alt text][lanes_reprojection]
+![alt text][lanes_topdown_fit]
 
+And reprojected onto the source images:
+
+![alt text][lanes_reprojected]
 ---
 
 ### Pipeline (video)
